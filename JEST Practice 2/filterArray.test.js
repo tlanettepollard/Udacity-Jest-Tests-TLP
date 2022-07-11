@@ -1,4 +1,3 @@
-const { hasUncaughtExceptionCaptureCallback } = require('process');
 var filterArray = require('./filterArray');
 
 describe('filterArray', () => {
