@@ -37,3 +37,5 @@ function getUserById(id) {
 		}, 2000);
 	});
 }
+
+module.exports = getUserById;
