@@ -3,8 +3,8 @@ import * as React from 'react';
 import Greeting from './Greeting';
 
 describe('Greeting', () => {
-    it('will match snapshot', () => {
-        var view = render(<Greeting />);
-        expect(view).toMatchSnapshot();
-    });
-})
+	it('will match snapshot', () => {
+		var view = render(<Greeting />);
+		expect(view).toMatchSnapshot();
+	});
+});
