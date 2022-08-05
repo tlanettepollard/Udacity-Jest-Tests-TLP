@@ -3,20 +3,22 @@ import * as React from 'react';
 import App from './App';
 
 describe('App', () => {
-	it('will have expected fields', () => {
-		var view = render(<App />);
+	it('will have all expected fields', () => {
+		/* eslint-disable */
+		const component = render(<App />);
 
-		var labels = view.screen.getAllByText(/name/);
+		const labels = component.getAllByText(/name/);
 		expect(labels.length).toEqual(2);
 
-		var firstNameInput = view.screen.getByTestId('first-name-input');
-		var lastNameInput = view.screen.getByTestId('last-name-input');
+		const firstNameInput = component.getByTestId('first-name-input');
+		const lastNameInput = component.getByTestId('last-name-input');
 		expect(firstNameInput).toBeInTheDocument();
 		expect(lastNameInput).toBeInTheDocument();
 
-		var submitButton = view.screen.getByText('Submit');
+		const submitButton = component.getByText('Submit');
 		expect(submitButton).toBeInTheDocument();
 	});
 });
 
-// 08032022 Test failed; check tomorrow
+// 08032022 Test failed; check tomorrow; 08052022 Fixed.
+
